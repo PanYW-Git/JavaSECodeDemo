@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--xml第一行必须以以上开头
+    version：使用的1.0版本的xml标注
+    encoding：声明字符编码是utf-8
+-->
+<!--注释格式~-->
+<!--根标签只能有一个-->
+<users>
+    <user id="1" desc="第一个用户">
+        <name>张三</name>
+        <sex>男</sex>
+        <address>监狱</address>
+
+    </user>
+    <user id="2" desc="第二个用户">
+        <name>李四</name>
+        <sex>男</sex>
+        <address>警察局</address>
+    </user>
+
+    <!--        <data> 3< 2 && 5> 5</data>-->
+    <!--有一些数据是无法存储的比如<>号 会冲突-->
+    <!--一定要写的花可以用特殊字符替代-->
+    <!--可以用浏览器打开校验-->
+    <data> 3&lt;4 &amp;&amp; 5 &gt; 4</data>
+    <!--特殊数据区<![CDATA[]>-->
+    <data1>
+        <![CDATA[
+                3<2 && 5>4
+            ]]>
+    </data1>
+</users>
